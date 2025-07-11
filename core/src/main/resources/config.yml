@@ -134,18 +134,18 @@ custom_economy:
   #   - Fallback: Shop integration prices (if custom price not found)
   #   - Ideal for servers that want full control over spawner item prices
   #     while still benefiting from shop integration for unconfigured items
-  price_source_mode: SHOP_PRIORITY
+  price_source_mode: SHOP_ONLY
 
   # Shop plugin integration
   shop_integration:
     enabled: true
     # Supported shop plugins: auto, EconomyShopGUI, EconomyShopGUI-Premium, ShopGUIPlus, zShop, ExcellentShop
     # 'auto' will attempt to detect your installed shop plugin automatically
-    preferred_plugin: auto
+    preferred_plugin: EconomyShopGUI-Premium
 
   # Custom sell price configuration
   custom_prices:
-    enabled: true
+    enabled: false
     # Path to custom item prices file
     price_file_name: "item_prices.yml"
 
@@ -167,7 +167,7 @@ hopper:
 #---------------------------------------------------
 # Configure visual indicators and effects for spawners
 hologram:
-  enabled: false        # Show floating text above spawners
+  enabled: true        # Show floating text above spawners
 
   # Hologram Text Display (supports color codes)
   # Available placeholders:
