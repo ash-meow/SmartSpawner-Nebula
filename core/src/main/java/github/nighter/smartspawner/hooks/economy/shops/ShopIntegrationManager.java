@@ -48,6 +48,7 @@ public class ShopIntegrationManager {
         }
 
         // Auto-detect available providers (only if no specific provider was successfully loaded)
+        registerProviderIfAvailable("EconomyShopGUI-Premium", () -> new EconomyShopGUIProvider(plugin));
         registerProviderIfAvailable("EconomyShopGUI", () -> new EconomyShopGUIProvider(plugin));
 
         // Only try ShopGUIPlus if the plugin is actually present and enabled
@@ -81,6 +82,9 @@ public class ShopIntegrationManager {
                     if (isPluginAvailable("EconomyShopGUI")) {
                         registerProviderIfAvailable("EconomyShopGUI", () -> new EconomyShopGUIProvider(plugin));
                         return !availableProviders.isEmpty();
+                    } else if (isPluginAvailable("EconomyShopGUI-Premium"){
+                        registerProviderIfAvailable("EconomyShopGUI-Premium", () -> new EconomyShopGUIProvider(plugin));
+                        return !availableProviders.isEmpty();                        
                     }
                     break;
                 case "shopguiplus":
